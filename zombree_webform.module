@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Provides an example that shows how to create a Webform composite.
+ */
+
+module_load_include('inc', 'webform', 'includes/webform.theme');
+
+/**
+ * Implements hook_theme().
+ */
+function zombree_webform_theme() {
+  $info = [
+    'zombree_webform_colleges_attended_composite' => [
+      'render element' => 'element',
+    ],
+    'zombree_webform_employment_info_composite' => [
+      'render element' => 'element',
+    ],
+  ];
+
+  return $info;
+}
+
+/**
+ * Prepares variables for zombree webform templates.
+ *
+ * Colleges Attended Composite template: zombree_webform-colleges-attended-composite.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ */
+function template_preprocess_zombree_webform_colleges_attended_composite(array &$variables) {
+  // Here you can get the composite element and alter it.
+  _template_preprocess_webform_composite($variables);
+}
+
+/**
+ * Prepares variables for zombree webform templates.
+ *
+ * Colleges Attended Composite template: zombree_webform-employment-info-composite.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ */
+function template_preprocess_zombree_webform_employment_info_composite(array &$variables) {
+  // Here you can get the composite element and alter it.
+  _template_preprocess_webform_composite($variables);
+}

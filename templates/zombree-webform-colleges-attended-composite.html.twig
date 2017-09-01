@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Default theme implementation of colleges attended composite.
+ *
+ * Available variables:
+ * - content: The colleges attended composite to be output.
+
+ * @see template_preprocess_zombree_webform()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('zombree_webform/zombree_webform') }}
+{% if flexbox %}
+
+    <div class="webform-flexbox">
+      {% if content.college_name %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.college_name }}</div></div>
+      {% endif %}
+      {% if content.start_date %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.start_date }}</div></div>
+      {% endif %}
+      {% if content.end_date %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.end_date }}</div></div>
+      {% endif %}
+      {% if content.degrees_earned %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.degrees_earned }}</div></div>
+      {% endif %}
+    </div>
+
+{% else %}
+    <div class="zombree_colleges_attended">
+  {{ content }}
+    </div>
+{% endif %}
+

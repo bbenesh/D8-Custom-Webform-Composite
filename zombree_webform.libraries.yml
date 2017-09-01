@@ -1,0 +1,7 @@
+zombree_webform:
+  version: VERSION
+  css:
+    theme:
+      css/zombree_webform.css: {}
+  dependencies:
+    - webform/webform.element.composite

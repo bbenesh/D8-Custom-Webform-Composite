@@ -1,0 +1,8 @@
+name: Zombree Webform Customizations
+type: module
+description: A module to contain Zombree-specific custom webform functionality.
+core: 8.x
+package: Custom
+dependencies:
+  - block
+  - webform
